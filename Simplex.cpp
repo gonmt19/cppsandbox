@@ -102,9 +102,6 @@ bool Simplex::run(){
     for(int i = 0; i < basis.size(); i++){
         int b = basis[i];
         parameter[b] = dict[i + 1][0];
-        for(int j = 1; j < 1 + nonbasis.size(); j++){
-            parameter[b] += dict[i][j] * parameter[nonbasis[j - 1]];
-        }
     }
     return true;
 }
